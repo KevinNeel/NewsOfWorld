@@ -6,7 +6,6 @@ let capitalizeFirstLetter = require("./date");
 const path = require("path");
 const countries = require("./counrtyname.json");
 const dotenv = require("dotenv").config();
-const mongodb = require("mongodb");
 
 const views_path = path.join(__dirname, "../public/views");
 const port = process.env.PORT || 8000;
