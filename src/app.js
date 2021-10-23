@@ -30,16 +30,6 @@ app.get("/", async (req, res) => {
   }
 });
 
-// app.get('/:countryCode/:category', async(req,res)=>{
-//   try {
-//     const countryCode = req.params.countryCode;
-//     const category = req.params.category;
-//     res.status(200).send('hello world')
-//   } catch (error) {
-//     res.status(500).send(error)
-//   }
-// })
-
 app.get("/countries", async (req, res) => {
   try {
     const countriesapi = countries;
