@@ -18,8 +18,3 @@ window.onscroll = function() {
       navMenu.classList.remove("active");
     }
   }
-
-  $(document).ready(function() {
-    var windowHeight = $(window).innerHeight();
-    $('body').css({'height':windowHeight});
-});
