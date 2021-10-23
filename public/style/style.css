@@ -412,7 +412,7 @@ section{
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
             padding: 30px;
-            height: 17%;
+            height: 20%;
 
     }
     .nav-link{
@@ -447,6 +447,11 @@ section{
 
 }
 
+@media only screen and (min-width:200px) and (max-width:886px){
+    .search{
+        margin-bottom: 40px;
+    }}
+
 @media only screen and (min-width:289px) and (max-width:405px ){
     .nav-menu{
         padding: 0;
@@ -472,3 +477,4 @@ section{
 
     }
 }
+
