@@ -52,15 +52,17 @@ app.get("/country", async (req, res) => {
   }
 });
 
-app.post("/search", async (req, res) => {
+app.post("/:countryName/search", async (req, res) => {
   try {
+    const countryName = req.params.countryName;
+    var dba = countries.name.find((element) => element.country == countryName);
     const searchItem = req.body.searchItem;
     let firstLetter = capitalizeFirstLetter(searchItem);
     callfunction.searchedData(firstLetter, fulldate, (cb) => {
       try {
         res
           .status(200)
-          .render("index", { articles: cb.articles, firstLetter: firstLetter });
+          .render("index", { articles: cb.articles, firstLetter: firstLetter, countryName: dba.country });
       } catch (error) {
         console.log(error);
         res.status(500).send(error);

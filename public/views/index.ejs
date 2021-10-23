@@ -12,7 +12,7 @@
       <nav class="navbar">
         <a href="/"><h2 id="heading">NewsOfWorld-<%= countryName %></h2></a>
         <div class="nav-menu">
-        <form class="search navlink" action="/search" method="post">
+        <form class="search navlink" action="/<%= countryName %>/search" method="post">
           <div class="searchBar">
             <input name="searchItem" id="searchItem" type="text" placeholder="Search"/>
             <button id="search" type="submit">Search</button>
