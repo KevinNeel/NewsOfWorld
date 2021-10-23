@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/selectCountry.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <h1>Select Country</h1>
+      <div class="container">
+        <% countries.forEach(function(names) { %>
+        <div class="card">
+          <a class="countries" href="/country?countryName=<%= names.country %>"
+            ><%= names.country %></a
+          >
+        </div>
+        <% }) %>
+      </div>
+    </section>
+    <script>
+      let countries = document.getElementsByClassName("countries");
+
+      for (i = 0; i <= countries.length; i++) {
+        let str = countries[i].innerHTML.replace('_', ' ');
+        countries[i].innerHTML = str
+      }
+    </script>
+  </body>
+</html>

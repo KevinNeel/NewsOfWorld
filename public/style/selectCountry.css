@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: 'Gilroy_Bold';
+    src: url(../fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Gilroy_Medium';
+    src: url(../fonts/Gilroy-Medium.ttf);
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Gilroy_Bold';
+    font-size: 3rem;
+}
+
+.container{
+    height: 100vh;
+    margin-top: 15px;
+}
+
+.card{
+    width: 18%;
+    height: 10%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 5px;
+    box-shadow: 0px 0px 140px rgba(75, 53, 53, 0.1);
+}
+
+a{
+    font-family: 'Gilroy_Medium';
+    text-decoration: none;
+    margin: 5px 50px;
+    color: #0095ff;
+    padding: 15px 25px;
+}
+
+a:hover{
+    border-bottom: 5px solid #0095ff;
+}
+
+@media only screen and (min-width:1156px) and (max-width:2000px ){
+    .conteiner{
+        width: 56%;
+    }
+  }
+
+
+@media only screen and (min-width:946px) and (max-width:1156px ){
+    .conteiner{
+        width: 70%;
+    }
+  }
+
+  @media only screen and (min-width:575px) and (max-width:655px ){
+    .conteiner{
+        width: 70%;
+    }
+    .card{
+        width: 28%;
+        margin: 10px 14px
+    };
+  }
+
+  @media only screen and (min-width:431px) and (max-width:574px ){
+   
+    .card{
+        width: 29%;
+        margin: 10px 8px
+    };
+  }
+
+  @media only screen and (min-width:380px) and (max-width:430px ){
+   
+    .card{
+        width: 30%;
+        margin: 10px 5px
+    };
+  }
+
+  @media only screen and (min-width:356px) and (max-width:379px ){
+   
+    .card{
+        width: 29%;
+        margin: 10px 5px;
+        font-size: 14px;
+    };
+   
+  }
+
+  @media only screen and (min-width:240px) and (max-width:354px ){
+   
+    .card{
+        width: 45%;
+        margin: 10px 5px;
+        font-size: 14px;
+    };
+   
+  }
+
+  
+  @media only screen and (min-width:70px) and (max-width:239px ){
+   
+    .card{
+        width: 100%;
+        font-size: 14px;
+    };
+   
+  }
+
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <nav class="navbar">
+        <a href="/"><h2 id="heading">NewsOfWorld-<%= countryName %></h2></a>
+        <div class="nav-menu">
+        <form class="search navlink" action="/search" method="post">
+          <div class="searchBar">
+            <input name="searchItem" id="searchItem" type="text" placeholder="Search"/>
+            <button id="search" type="submit">Search</button>
+          </div>
+        </form>
+        <a id="countries" href="/countries">Select Country</a>
+      </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div>
+       
+      </nav>
+      <div class="row">
+        <% if (articles != ''){ %> <% for(var article of articles) { %>
+
+        <div class="card column">
+          <div class="title">
+            <h4><%= article.title %></h4>
+          </div>
+          <div class="image">
+            <img src="<%= article.urlToImage%>" alt="<%= article.source.name %> has not uploaded the image" />
+          </div>
+          <div class="content">
+            <% if(article.description != '') { %>
+              <p class="description"><%= article.description %></p>
+              <% } else { %>
+              <p class="description"><%= article.source.name %> has not uploaded the image</p>
+              <% } %>
+            <div class="link">
+              <a href="<%= article.url %>">Visit Article</a>
+            </div>
+          </div>
+        </div>
+        <% }%> <% }else{ %>
+        <div class="nodata">
+          <h1>DATA IS NOT AVAILABLE FOR <%=firstLetter%> </h1>
+        </div>
+        <%}%>
+      </div>
+    </section>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
